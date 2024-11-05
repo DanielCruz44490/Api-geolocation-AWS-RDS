@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocalización de IP</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+          crossorigin="anonymous">
+    <style>
+        body {
+            background: linear-gradient(135deg, black 0%, #f1f3f5 100%);
+            font-family: Arial, sans-serif;
+        }
+
+        /* Encabezado estilizado */
+        .navbar-custom {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #0066cc !important;
+        }
+
+        /* Estilos de la tarjeta */
+        .card-custom {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header-custom {
+            background-color: #0066cc;
+            color: white;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            text-align: center;
+        }
+
+        /* Tabla estilizada y alineada a la izquierda */
+        .table-styled {
+            border-collapse: separate;
+            border-spacing: 0 10px;
+            margin-left: 0; /* Tabla pegada a la izquierda */
+        }
+
+        .table-styled thead th {
+            background-color: #004a99;
+            color: white;
+            border: none;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+        }
+
+        .table-styled tbody tr {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .table-styled tbody tr:hover {
+            transform: scale(1.02);
+        }
+
+        .table-styled tbody td {
+            padding: 16px;
+            border-top: 1px solid #e9ecef;
+            text-align: center;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Botón Actualizar */
+        .btn-custom {
+            background-color: #0066cc;
+            color: white;
+            font-weight: 600;
+            border-radius: 20px;
+            padding: 10px 30px;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 10px 0;
+            text-align: center;
+            color: #073964;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header class="container my-4">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom rounded">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Geolocalización</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Tabla</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Espacio para más enlaces -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="container my-5">
+        <div class="card card-custom shadow-sm">
+            <div class="card-header card-header-custom">
+                <h2 class="h5 mb-0">Datos de Geolocalización de IP</h2>
+            </div>
+            <div class="card-body">
+                <!-- Tabla para mostrar los datos -->
+                <div class="table-responsive">
+                    <table class="table  align-left">
+                        <thead>
+                            <tr>
+                                <th>IP</th>
+                                <th>País</th>
+                                <th>Continente</th>
+                                <th>Ciudad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Las filas se generarán dinámicamente con JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Botón Actualizar -->
+                <div class="text-left mt-4">
+                    <button id="refreshButton" class="btn btn-custom shadow-sm" onclick="refreshPage()">Cargar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+         © 2024 Copyright: Brayan
+    </footer>
+
+    <!-- Bootstrap JS y Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" 
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN6jIeHz" 
+            crossorigin="anonymous"></script>
+
+    <!-- Archivo de JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
