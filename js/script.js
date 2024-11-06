@@ -1,6 +1,6 @@
 // Esperar a que el DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", () => {
-    const API_GEOLOCATION_URL = 'http://34.207.174.201/geolocation/index.php';
+    const API_GEOLOCATION_URL = 'http://18.212.119.35/geolocation/index.php';
 
     // Referencia al tbody de la tabla
     const tbody = document.querySelector("tbody");
